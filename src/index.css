@@ -1,0 +1,679 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+} 
+:root{
+    --font-family:cursive;
+    --bg-color:#f4f3ff;
+    --btn-color:#646cff;
+    --dark-color:#242424;
+    --helper-color:#99b9ff;
+}
+
+html{
+    font-size: 65.5%;
+    scroll-behavior: smooth;
+
+}
+/*Base style*/
+
+body{
+    margin: 0;
+    min-width: 32rem;
+    min-height: 100vh;
+
+}
+
+h1{
+    font-size: 4.4rem;
+    line-height: 1.1;
+    font-weight: bold;
+}
+span{
+    font-weight: bold;
+}
+
+p,
+li,
+label,
+input,
+textarea{
+    /* color: black; */
+    font-size: 1.9rem;
+    line-height: 1.56;
+    letter-spacing: 0.11rem;
+    word-spacing: 0.06rem;
+}
+
+a{
+    /* font-weight: bold; */
+    font-family: var(--font-family);
+    font-weight: 550;
+    font-size: 2.2rem;
+    letter-spacing: 0.05rem;
+    color: var(--dark-color);
+    text-decoration: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 140rem;
+    padding: 4rem 2.4rem;
+    margin: 0 auto;
+}
+
+.grid{
+    display: flex;
+    gap: 6.4rem;
+}
+
+.grid-two-cols{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.grid-four-cols{
+    grid-template-columns: repeat(4,1fr);
+}
+
+/*Modules rules*/
+
+button{
+    text-transform: capitalize;
+    padding: 0.7rem 1.4rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    background-color: var(--btn-color);
+    border-radius: 0.8rem;
+    transition: border-color 0.3s;
+    --webkit-border-radius:0.8rem;
+    --mox-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    border: 0.1rem solid transparent;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+
+/* State rules */
+
+button:hover{
+    box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+}
+
+
+a:hover
+a.active{
+    color: #535bf2;
+}
+
+/** Hero section **/
+
+.section-hero{
+    & .grid{
+        align-items: center;
+    }
+    
+.hero-content{
+    & p{
+        margin: 2.4rem 0 4.8rem 0;
+        &:first-child{
+            margin: 0 0 1.2rem 0;
+        }
+    }
+}
+.hero-image{
+    display: flex;
+    justify-content: center;
+    
+}
+}
+
+/**** End Hero *****/
+
+/**** Analytics SEction ****/
+
+.section-analytics{
+    margin: 8.6rem 0;
+    /* display: flex; */
+
+    & .container{
+        background-color: var(--bg-color);
+        border-radius: 1rem;
+    }
+    & .grid{ 
+        color: var(--dark-color);
+
+        & .div1{
+            margin:0 auto;
+            padding-left: 0px;
+            padding-right: 60px;
+            text-align: center;
+            border-right: 0.2rem solid var(--dark-color);
+            &:last-child{
+                border: none;
+            }
+            & h2{
+                font-size: 2.4rem;
+            }
+            & p{
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+/**** End Analytics Section ****/
+
+  /* Contact page styling  */
+
+.section-contact{
+    & .contact-content{
+        padding: 0;
+
+        & h1{
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    & .container{
+        padding-top: 3.2rem;
+    }
+    & .contact-img{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        & img{
+            width: 95%;
+            height: auto;
+        }
+    }
+    & .section-form{
+        & form{
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        & label{
+            display: block;
+            margin-bottom: 1.2rem;
+            text-transform: capitalize;
+        }
+        & input,textarea{
+            width: 80%;
+            padding: 0.4rem 0.6rem;
+        }
+    }
+}
+
+.footer{
+    & .footer-box{
+        background-color: rgb(196, 196, 196);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 1rem;
+        & .list-item li{
+            margin-top: 40px;
+
+        }
+        & .footer-bottom{
+            font-size: 1.5rem;
+        }
+        & .footer-content{
+            margin-bottom: 10px;
+            font-size: 1.7rem;
+        }
+
+        
+    }
+    
+    & .container{
+            /* display: grid; */
+            /* grid-template-columns: repeat(4,1fr); */
+            /* display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;  */
+            /* color: var(--dark-color); */
+        & .div1{
+            margin:0 auto 0 auto;
+            padding-left: 5px;
+            padding-right: 60px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+    }  
+    
+    }
+} 
+
+/* // about -page  */
+
+.section-about{
+    & .grid{
+        align-items: center;
+    }
+    
+.content{
+    & p{
+        margin: 2.4rem 0 2.8rem 0;
+        &:first-child{
+            margin: 0.1 0 1.2rem 0;
+        }
+    }
+}
+.hero-image{
+    display: flex;
+    justify-content: center;
+    
+}
+}
+
+
+.section-how{
+    & .grid{
+        align-items: center;
+    }
+    
+.main-content{
+    & p{
+        margin: 2.4rem 0 2.8rem 0;
+        &:first-child{
+            margin: 0.1 0 1.2rem 0;
+        }
+    }
+}
+.hero-image{
+    display: flex;
+    justify-content: center;
+    
+}
+}
+
+.line{
+    max-width: 140rem;
+    width: 100%;
+    height: 0.1rem;
+    border-top: 1px solid black;
+    margin: 0 auto;
+    box-shadow: 1px 1px 1px solid black;
+}
+
+
+/* Registration styling */
+
+
+.section-registration{
+    & .contact-content{
+        padding: 0;
+
+        & h1{
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    & .container{
+        padding-top: 3.2rem;
+    }
+    & .contact-img{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        & img{
+            width: 95%;
+            height: auto;
+        }
+    }
+    & .registration-form{
+        & form{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        & button{
+            width: 30rem;
+            height: inherit;
+        }
+        & label{
+            display: block;
+            margin-bottom: 1.2rem;
+            text-transform: capitalize;
+        }
+        & input,textarea{
+            width: 80%;
+            padding: 0.4rem 0.6rem;
+        }
+    }
+}
+
+/* Login form styling */
+
+
+.section-login{
+    & .contact-content{
+        padding: 0;
+
+        & h1{
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    & .container{
+        padding-top: 3.2rem;
+    }
+    & .contact-img{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        & img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    & .login-form{
+        margin-top: 10rem;
+        & form{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        & button{
+            width: 30rem;
+            height: inherit;
+        }
+        & label{
+            display: block;
+            margin-bottom: 1.2rem;
+            text-transform: capitalize;
+        }
+        & input,textarea{
+            width: 80%;
+            padding: 0.4rem 0.6rem;
+        }
+    }
+}
+
+
+/* .remitterInfo */
+
+.section-remitterInfo{
+    & .remitterInfo{
+        /* Styling the form container */
+        margin: 0 auto;
+        max-width: 140rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+  & .form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    & .heading{
+        font-size: 2rem;
+    }
+  }
+  
+  /* Styling form headings */
+  h2 {
+    margin-bottom: 15px;
+    color: #2a2a5b;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Styling the form labels */
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Input fields common styles */
+  input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Input focus */
+  input:focus, select:focus {
+    outline: none;
+    border-color: #565656;
+    box-shadow: 0 0 5px rgba(69, 69, 70, 0.5);
+  }
+  
+  /* Submit button styling */
+  button[type="submit"] {
+    background-color: #2a2a5b;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #44447c;
+}
+
+  /* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+    input, select {
+    font-size: 0.9rem;
+    }
+}
+
+    }
+}
+
+/* Styling the benificiary page  */
+
+.section-benificiaryInfo{
+    & .benificiaryInfo{
+        /* Styling the form container */
+        margin: 0 auto;
+        max-width: 140rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+  & .form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    & .heading{
+        font-size: 2rem;
+    }
+  }
+  
+  /* Styling form headings */
+  h2 {
+    margin-bottom: 15px;
+    color: #2a2a5b;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Styling the form labels */
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Input fields common styles */
+  input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Input focus */
+  input:focus, select:focus {
+    outline: none;
+    border-color: #565656;
+    box-shadow: 0 0 5px rgba(69, 69, 70, 0.5);
+  }
+  
+  /* Submit button styling */
+  button[type="submit"] {
+    background-color: #2a2a5b;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #44447c;
+}
+
+  /* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+    input, select {
+    font-size: 0.9rem;
+    }
+}
+
+    }
+}
+
+
+/* Styling the send money  */
+
+
+.section-sendmoneyInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    & .heading{
+        color: rgb(174, 50, 240); 
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    & .sendmoneyInfo{
+        /* Styling the form container */
+        margin: 0 auto;
+        max-width: 140rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+  & .form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+  }
+  
+  /* Styling form headings */
+  h2 {
+    margin-bottom: 15px;
+    color: #2a2a5b;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Styling the form labels */
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Input fields common styles */
+  input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Input focus */
+  input:focus, select:focus {
+    outline: none;
+    border-color: #565656;
+    box-shadow: 0 0 5px rgba(69, 69, 70, 0.5);
+  }
+  
+  /* Submit button styling */
+  button[type="submit"] {
+    background-color: #2a2a5b;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #44447c;
+}
+
+  /* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+    input, select {
+    font-size: 0.9rem;
+    }
+}
+
+    }
+}
